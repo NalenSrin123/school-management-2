@@ -66,7 +66,7 @@ function Popular_Courses() {
               <div className="absolute top-4 right-4 bg-gray-200 text-blue-500 px-3 py-1 rounded-full text-xs font-semibold hover:bg-blue-500 hover:text-white transition"> {value.name_on_img}</div>
             </div>
 
-            <div className="p-5 flex flex-col flex-grow">
+            <div className="p-5 flex flex-col grow">
               <div className="font-bold text-lg mb-3">{value.name}</div>
 
               <div className="flex items-center gap-2 mb-4">

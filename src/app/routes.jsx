@@ -9,6 +9,7 @@ function AppRoutes() {
       <Route path='/' element={<Popular_Courses />} />
       <Route path='/admin/login' element={<Login />} />
       <Route path='*' element={<Navigate to='/' replace />} />
+      <Route path='/reset-email-preview' element={<ResetPasswordEmail />} />
     </Routes>
   )
 }

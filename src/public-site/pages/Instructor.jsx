@@ -40,9 +40,9 @@ function Instructor() {
         <div className="text-blue-600 text-center mt-3">MEET THE FACULTY</div>
         <div className="font-bold text-black text-2xl  text-center">Our Expert Instructors</div>
         <br />
-        <div className="grid grid-cols-4 w-full h-[450px] gap-4">
+        <div className="grid grid-cols-4 w-full h-112.5 gap-4">
             {card.map((value)=>(
-                <div className="col-span-1 w-full h-[100%]">
+                <div className="col-span-1 w-full h-full">
                 <img src={value.img} className='w-full h-[75%] rounded-2xl' alt="" />
                 <div className="mt-2">
                     <div className='font-bold text-black text-2xl'>{value.name}</div>
