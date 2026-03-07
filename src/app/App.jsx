@@ -1,12 +1,13 @@
-import { BrowserRouter } from 'react-router-dom'
-import AppRoutes from './routes'
+import Header from "../dashboard/layout/Header";
+import Hero from "../public-site/components/HeroSection";
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
-  )
+    <dive>
+      <Header/>
+      <Hero/>
+    </dive>
+  );
 }
 
-export default App
+export default App;
