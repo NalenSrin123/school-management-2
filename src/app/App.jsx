@@ -15,6 +15,10 @@ import Register from '../dashboard/components/forms/register_form';
 import Footer from '../public-site/layout/Footer';
 import CourseCatalog from '../dashboard/pages/courses/CourseCreate';
 import About_topsection from '../components/ui/About_topsection';
+import About from '../public-site/pages/About';
+import Header from '../dashboard/layout/Header';
+import HeroSection from '../public-site/components/HeroSection';
+import VideoSection from '../public-site/components/VideoSection';
 
 function App() {
   return (
@@ -35,6 +39,9 @@ function App() {
         <Footer/>
         <CourseCatalog/>
         <About_topsection/>
+        <About/>
+        <HeroSection/>
+        <VideoSection/>
       </BrowserRouter>
 
     </>
