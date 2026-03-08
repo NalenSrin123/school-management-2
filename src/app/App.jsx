@@ -1,13 +1,15 @@
 import { BrowserRouter } from 'react-router-dom'
-// import AppRoutes from './routes'
-import Confim_reset_password from "../services/confim_reset_password";
+import AppRoutes from './routes'
+import Design_page_forgot_password from "../services/Design_page_forgot_password";
+
 function App() {
   return (
-    // <BrowserRouter>
-    //   <AppRoutes />
-    // </BrowserRouter>
-    <Confim_reset_password></Confim_reset_password>
-    
+    <>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+      <Design_page_forgot_password />
+    </>
   )
 }
 
