@@ -7,7 +7,6 @@ import ResetPasswordEmail from "../public-site/pages/ResetPasswordEmail";
 
 import Popular_Courses from '../public-site/pages/Popular_Courses'
 import Instructor from '../public-site/pages/Instructor'
-import ResetPasswordEmail from '../public-site/pages/ResetPasswordEmail'
 
 import ConfirmOTP from '../services/ConfirmOTP';
 
