@@ -14,6 +14,7 @@ import DesingContactPageBottomSection from '../components/DesignContactPageBotto
 import Register from '../dashboard/components/forms/register_form';
 import Footer from '../public-site/layout/Footer';
 import CourseCatalog from '../dashboard/pages/courses/CourseCreate';
+import About_topsection from '../components/ui/About_topsection';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Register/>
         <Footer/>
         <CourseCatalog/>
+        <About_topsection/>
       </BrowserRouter>
 
     </>
