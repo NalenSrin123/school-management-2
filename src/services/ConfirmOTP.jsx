@@ -86,7 +86,7 @@ const ConfirmOTP = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4 font-sans">
-      <div className="flex items-center gap-2 mb-8">
+      <div className="flex items-center gap-2 mb-5">
         <div className="bg-[#1D4ED8] p-2 rounded-lg shadow-sm text-white w-10 h-10 flex items-center justify-center text-xl">
           <FontAwesomeIcon icon={faGraduationCap} />
         </div>
@@ -149,7 +149,7 @@ const ConfirmOTP = () => {
             >
               Resend code
             </button>
-            <span className="bg-slate-50 text-slate-400 px-2 py-1 rounded text-[10px] font-mono border border-slate-100">
+            <span className="bg-slate-50 text-black-400 px-2 py-1 rounded text-[10px] font-mono border border-slate-100">
               00:{timer.toString().padStart(2, '0')}
             </span>
           </div>
