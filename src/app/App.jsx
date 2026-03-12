@@ -1,51 +1,44 @@
-import { BrowserRouter } from 'react-router-dom'
-import AppRoutes from './routes'
-import Design_page_forgot_password from "../services/Design_page_forgot_password";
-import ResetPasswordEmail from '../public-site/pages/ResetPasswordEmail';
-import VerificationEmail from '../public-site/pages/VerificationEmail';
-import ConfirmOTP from '../services/ConfirmOTP';
-import ConfirmPassword from '../services/confim_reset_password';
-import ForgotPassword from '../services/Design_page_forgot_password';
-import Login from '../services/Login';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Contact from '../public-site/pages/Contact';
 import Instructor from '../public-site/pages/Instructor';
 import Popular_Courses from '../public-site/pages/Popular_Courses';
 import DesingContactPageBottomSection from '../components/DesignContactPageBottomSection';
-import Register from '../dashboard/components/forms/register_form';
 import Footer from '../public-site/layout/Footer';
-import CourseCatalog from '../dashboard/pages/courses/CourseCreate';
 import About_topsection from '../components/ui/About_topsection';
 import About from '../public-site/pages/About';
-import Header from '../dashboard/layout/Header';
 import HeroSection from '../public-site/components/HeroSection';
 import VideoSection from '../public-site/components/VideoSection';
+import Nav from '../components/layout/nav';
+import Form from '../services/Form'; 
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        {/* <AppRoutes /> */}
-        <Design_page_forgot_password/>
-        <ResetPasswordEmail/>
-        <VerificationEmail/>
-        <ConfirmOTP/>
-        <ConfirmPassword/>
-        <Login/>
-        <Contact/>
-        <Instructor/>
-        <Popular_Courses/>
-        <DesingContactPageBottomSection/>
-        <Register/>
-        <Footer/>
-        <CourseCatalog/>
-        <About_topsection/>
-        <About/>
-        <HeroSection/>
-        <VideoSection/>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/form/*" element={<Form />} />
+        <Route path="/form" element={<Navigate to="/form/login" replace />} />
 
-    </>
-  )
+        
+        <Route
+          path="/*"
+          element={
+            <>
+              <Nav />
+              <HeroSection />
+              <About_topsection />
+              <About />
+              <Popular_Courses />
+              <VideoSection />
+              <Instructor />
+              <DesingContactPageBottomSection />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

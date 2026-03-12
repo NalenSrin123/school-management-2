@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 
 function ConfirmPassword() {
@@ -71,9 +72,9 @@ function ConfirmPassword() {
           {/* Back to Login */}
           <p className="text-sm text-center text-gray-600 mt-4">
             Remember your password?{" "}
-            <a href="/login" className="text-blue-600 hover:underline">
+            <Link to="/form/login" className="text-blue-600 hover:underline">
               Back to Login
-            </a>
+            </Link>
           </p>
         </form>
       </div>
