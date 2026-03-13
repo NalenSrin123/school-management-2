@@ -85,7 +85,7 @@ const ConfirmOTP = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4 font-sans">
+    <div className="w-full sm:w-50% max:w-[40%] m-auto bg-white flex flex-col items-center justify-center p-4 md:p-1 lg:p-4  font-sans">
       <div className="flex items-center gap-2 mb-5">
         <div className="bg-[#1D4ED8] p-2 rounded-lg shadow-sm text-white w-10 h-10 flex items-center justify-center text-xl">
           <FontAwesomeIcon icon={faGraduationCap} />
@@ -95,7 +95,7 @@ const ConfirmOTP = () => {
         </h1>
       </div>
 
-      <div className="bg-white rounded-[35px] sm:rounded-[45px] shadow-sm border border-slate-100 w-full max-w-sm p-6 sm:p-10 flex flex-col items-center">
+      <div className="bg-white rounded-[35px] sm:rounded-[45px] shadow-sm border border-slate-100 w-full max-w-md p-6 sm:p-10 flex flex-col items-center">
         <div className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-[#1D4ED8] text-xl sm:text-2xl">
           <FontAwesomeIcon icon={faLock} />
         </div>
@@ -117,7 +117,7 @@ const ConfirmOTP = () => {
               value={data}
               onChange={(e) => handleChange(e, index)}
               onKeyDown={(e) => handleKeyDown(e, index)}
-              className={`w-9 h-12 sm:w-10 sm:h-14 border-2 rounded-xl text-center text-lg sm:text-xl font-bold transition-all outline-none
+              className={`w-11 h-12 sm:w-12 sm:h-14 border-2 rounded-xl text-center text-lg sm:text-xl font-bold transition-all outline-none
                 ${data ? 'border-[#1D4ED8]' : 'border-slate-200'} focus:border-[#1D4ED8]`}
             />
           ))}
@@ -157,7 +157,7 @@ const ConfirmOTP = () => {
 
         <button 
           onClick={() => navigate(-1)} 
-          className="flex items-center gap-2 text-slate-500 font-medium text-xs hover:text-slate-800 transition-colors"
+          className="flex items-center gap-2 text-slate-500 font-medium text-xs hover:text-blue-400 transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -166,7 +166,7 @@ const ConfirmOTP = () => {
         </button>
       </div>
 
-      <p className="mt-5 text-[10px] font-bold text-slate-300 tracking-[0.3em] uppercase">
+      <p className="mt-5 text-[8px] font-bold text-slate-300 tracking-[0.3em] uppercase">
         Secure Enterprise Environment
       </p>
     </div>
