@@ -79,7 +79,7 @@ function CourseCard({ course }) {
   return (
     <div className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white border border-gray-100 flex flex-col">
       {/* Thumbnail */}
-      <div className={`relative h-44 bg-gradient-to-br ${course.bg} flex items-center justify-center overflow-hidden`}>
+      <div className={`relative h-44 bg-linear-to-br ${course.bg} flex items-center justify-center overflow-hidden`}>
         <span className="text-6xl opacity-80 group-hover:scale-110 transition-transform duration-500">
           {course.icon}
         </span>
@@ -135,7 +135,7 @@ export default function CourseCatalog() {
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="mb-6">
+        <div className="mb-6 mt-12">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
             Explore Our Courses
           </h1>

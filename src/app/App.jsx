@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Contact from '../public-site/pages/Contact';
 import Instructor from '../public-site/pages/Instructor';
@@ -17,6 +18,34 @@ function App() {
       <Routes>
         <Route path="/form/*" element={<Form />} />
         <Route path="/form" element={<Navigate to="/form/login" replace />} />
+=======
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes";
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        {/* <AppRoutes /> */}
+        {/* <Design_page_forgot_password/>
+        <ResetPasswordEmail/>
+        <VerificationEmail/> */}
+        <ConfirmOTP/>
+        {/* <ConfirmPassword/>
+        <Login/>
+        <Contact/>
+        <Instructor/>
+        <Popular_Courses/>
+        <DesingContactPageBottomSection/>
+        <Register/>
+        <Footer/>
+        <CourseCatalog/>
+        <About_topsection/>
+        <About/>
+        <HeroSection/>
+        <VideoSection/> */}
+      </BrowserRouter>
+>>>>>>> db6c26b978d433c650465a3ba52578d03586b14d
 
         
         <Route

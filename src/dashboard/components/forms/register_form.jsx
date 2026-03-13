@@ -14,22 +14,26 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen w-full sm:w-[90%] m-auto flex bg-gray-100 rounded-xl shadow-2xl mt-5">
+
+    <div className="min-h-screen w-full sm:w-[90%] m-auto flex rounded-xl mt-5 justify-center">
+      
       {/* LEFT SIDE */}
-      <div className="hidden lg:flex lg:w-1/2 relative">
+      <div className="hidden md:flex lg:w-[40%] relative">
         <img
           src={registerImage} // put your image inside public folder
           alt="Education"
           className="absolute inset-0 w-full h-full object-cover"
         />
+        <div className="absolute inset-0 w-full h-full bg-black/70">
 
-        <div className="relative z-10 bg-black/30 text-white p-14 flex flex-col justify-center">
+        </div>
+        <div className="relative z-10 bg-black/30 text-white p-14 flex flex-col justify-center ">
           <div className="mb-6 flex items-center space-x-3">
             <div className="bg-white text-blue-600 p-2 rounded-lg">🎓</div>
-            <h2 className="text-xl font-semibold">EduManage Enterprise</h2>
+            <h2 className="text-xl font-semibold md:text-lg">EduManage Enterprise</h2>
           </div>
 
-          <h1 className="text-4xl xl:text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-3xl xl:text-5xl  font-bold leading-tight mb-6">
             Empowering the <br />
             next generation of <br />
             educators
@@ -71,19 +75,19 @@ export default function Register() {
               Continue with Google Account
             </button>
 
-            <button className="flex items-center justify-center gap-2 border rounded-lg py-2 px-4 hover:bg-gray-50 transition">
+            {/* <button className="flex items-center justify-center gap-2 border rounded-lg py-2 px-4 hover:bg-gray-50 transition">
               <img
                 src={microsoft}
                 alt="Microsoft"
                 className="w-4 h-4"
               />
               Continue with Microsoft Account
-            </button>
+            </button> */}
           </div>
 
           <div className="flex items-center mb-6">
             <div className="flex-grow border-t"></div>
-            <span className="mx-4 text-gray-400 text-sm">Or sign up with</span>
+            <span className="mx-4 text-gray-600 text-sm">Or sign up with</span>
             <div className="flex-grow border-t"></div>
           </div>
 

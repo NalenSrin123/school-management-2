@@ -1,32 +1,114 @@
+<<<<<<< HEAD
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from '../public-site/pages/Home'
 import Login from '../dashboard/pages/auth/Login'
 import Form from '../services/Form'
 
 import VerificationEmail from '../public-site/pages/VerificationEmail'
+=======
+import { Navigate, Route, Routes } from "react-router-dom";
+import Home from "../pages/home";
+import About from "../pages/about";
+import Contact from "../pages/Contact";
+import Courses from "../pages/Courses";
+// import Location from '../pages/Location'
+import VdoGuide from "../pages/VdoGuide";
+import Login from "../dashboard/pages/auth/Login";
+import VerificationEmail from "../public-site/pages/VerificationEmail";
+>>>>>>> db6c26b978d433c650465a3ba52578d03586b14d
 import ResetPasswordEmail from "../public-site/pages/ResetPasswordEmail";
+import Popular_Courses from "../public-site/pages/Popular_Courses";
+import Instructor from "../public-site/pages/Instructor";
+import ConfirmOTP from "../services/ConfirmOTP";
+import Nav from "../components/layout/nav";
+import Footer from "../public-site/layout/Footer";
 
-import Popular_Courses from '../public-site/pages/Popular_Courses'
-import Instructor from '../public-site/pages/Instructor'
-
-import ConfirmOTP from '../services/ConfirmOTP';
-
+// Layout component that wraps pages with Nav and Footer
+const Layout = ({ children }) => {
+  return (
+    <>
+      <Nav />
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
+};
 
 function AppRoutes() {
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
+      {/* Public Site Pages with Layout */}
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <Home />
+          </Layout>
+        }
+      />
+      <Route
+        path="/about"
+        element={
+          <Layout>
+            <About />
+          </Layout>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <Layout>
+            <Contact />
+          </Layout>
+        }
+      />
+      <Route
+        path="/courses"
+        element={
+          <Layout>
+            <Courses />
+          </Layout>
+        }
+      />
+      {/* <Route path='/location' element={<Layout><Location /></Layout>} /> */}
+      <Route
+        path="/vdoguide"
+        element={
+          <Layout>
+            <VdoGuide />
+          </Layout>
+        }
+      />
 
-      <Route path='/verificationemail' element={<VerificationEmail/>}/>
-      <Route path='/design_popular_course_and_instructor' element={<><Popular_Courses /><Instructor /></>} />
-      <Route path='/admin/login' element={<Login />} />
-      <Route path='/reset-email-preview' element={<ResetPasswordEmail />} />
+      {/* Other Routes */}
+      <Route path="/verificationemail" element={<VerificationEmail />} />
+      <Route
+        path="/design_popular_course_and_instructor"
+        element={
+          <>
+            <Popular_Courses />
+            <Instructor />
+          </>
+        }
+      />
+      <Route path="/admin/login" element={<Login />} />
+      <Route path="/reset-email-preview" element={<ResetPasswordEmail />} />
+      <Route path="/ConfirmOTP" element={<ConfirmOTP />} />
 
+<<<<<<< HEAD
       <Route path='/form/*' element={<Form />} />
       <Route path='/ConfirmOTP' element={<ConfirmOTP />} />
       <Route path='*' element={<Navigate to='/' replace />} />
+=======
+      {/* Fallback route */}
+      <Route path="*" element={<Navigate to="/" replace />} />
+>>>>>>> db6c26b978d433c650465a3ba52578d03586b14d
     </Routes>
-  )
+  );
 }
 
+<<<<<<< HEAD
 export default AppRoutes
+=======
+export default AppRoutes;
+>>>>>>> db6c26b978d433c650465a3ba52578d03586b14d
