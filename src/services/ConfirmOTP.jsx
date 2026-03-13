@@ -57,6 +57,10 @@ const ConfirmOTP = () => {
       });
       if (response.ok) {
         setStatus({ type: 'success', message: 'Your OTP is successful' });
+        // Navigate to reset password page after successful verification
+        setTimeout(() => {
+          navigate('/form/confirm-reset');
+        }, 1500);
       } else {
         setStatus({ type: 'error', message: 'Invalid OTP. Please try again.' });
       }
@@ -132,11 +136,10 @@ const ConfirmOTP = () => {
         )}
 
         <button 
-          onClick={handleVerify}
-          disabled={isVerifying || otp.join("").length < 6}
-          className="w-full bg-[#1D4ED8] hover:bg-blue-700 disabled:bg-slate-300 text-white font-bold py-3 sm:py-4 rounded-xl shadow-lg shadow-blue-100 transition-all text-base mb-8"
+          onClick={() => navigate('/form/confirm-reset')}
+          className="w-full bg-[#1D4ED8] hover:bg-blue-700 text-white font-bold py-3 sm:py-4 rounded-xl shadow-lg shadow-blue-100 transition-all text-base mb-8"
         >
-          {isVerifying ? 'Verifying...' : 'Verify'}
+          Continue to Reset Password
         </button>
 
         <div className="text-center mb-8 sm:mb-10">

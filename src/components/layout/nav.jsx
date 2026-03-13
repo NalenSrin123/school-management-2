@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Nav = () => {
@@ -10,7 +10,6 @@ const Nav = () => {
     { name: "About", path: "/about" },
     { name: "Courses", path: "/courses" },
     { name: "Video Guidline", path: "/vdoguide" },
-    // { name: "Location", path: "/location" },
     { name: "Contact Us", path: "/contact" },
   ];
 
@@ -20,7 +19,7 @@ const Nav = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-6 py-4">
         {/* LOGO */}
-        <a href="/" className="flex items-center gap-3 shrink-0">
+        <Link to="/" className="flex items-center gap-3 shrink-0">
           <div className="w-10 h-10 bg-linear-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center shadow-md">
             <svg
               width="20"
@@ -41,7 +40,7 @@ const Nav = () => {
               EduManage
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* NAV LINKS - Desktop */}
         <ul className="hidden lg:flex items-center gap-1 list-none m-0 p-0">
@@ -67,17 +66,25 @@ const Nav = () => {
 
         {/* RIGHT SIDE - Desktop */}
         <div className="hidden lg:flex items-center gap-3 shrink-0">
-          {/* Profile Icon */}
-          <button
-            title="Profile"
-            className="w-10 h-10 rounded-full bg-gray-100 border-2 border-gray-200 flex items-center justify-center hover:bg-gray-200 hover:border-gray-300 transition-all duration-200 hover:scale-105 cursor-pointer"
+          {/* Login Button */}
+          <Link
+            to="/form/login"
+            className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-blue-600 font-medium text-sm transition-colors no-underline"
+          >
+            Login
+          </Link>
+
+          {/* Enroll Now */}
+          <Link
+            to="#"
+            className="flex items-center gap-2 px-5 py-2.5 bg-blue-500 text-white text-sm font-semibold rounded-3xl hover:bg-slate-700 transition-all duration-200 shadow-sm hover:shadow-md no-underline"
           >
             <svg
               width="18"
               height="18"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#4B5563"
+              stroke="white"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -85,16 +92,8 @@ const Nav = () => {
               <circle cx="12" cy="8" r="4" />
               <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
             </svg>
-          </button>
-
-          {/* Enroll Now */}
-          <a
-            href="#"
-            className="flex items-center gap-2 px-5 py-2.5 bg-blue-500 text-white text-sm font-semibold rounded-3xl hover:bg-blue-700 transition-all duration-200 shadow-sm hover:shadow-md no-underline"
-          >
-            {/* <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse text-white" /> */}
             Enroll Now
-          </a>
+          </Link>
         </div>
 
         {/* HAMBURGER - Mobile */}
@@ -133,6 +132,16 @@ const Nav = () => {
               {link.name}
             </Link>
           ))}
+
+          {/* Mobile Login Button */}
+          <Link
+            to="/form/login"
+            onClick={() => setMenuOpen(false)}
+            className="flex items-center gap-2 px-3 py-3 text-gray-600 hover:text-blue-600 font-medium text-sm border-b border-gray-50 no-underline"
+          >
+            Login
+          </Link>
+          
           <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
             <button className="w-10 h-10 rounded-full bg-gray-100 border-2 border-gray-200 flex items-center justify-center hover:bg-gray-200 transition-all cursor-pointer">
               <svg
@@ -149,13 +158,13 @@ const Nav = () => {
                 <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
               </svg>
             </button>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-xl hover:bg-slate-700 transition-all no-underline"
             >
               <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
               Enroll Now
-            </a>
+            </Link>
           </div>
         </div>
       )}

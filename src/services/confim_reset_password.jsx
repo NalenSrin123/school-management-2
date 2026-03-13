@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 
 function ConfirmPassword() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white  px-4">
+    <div className="min-h-screen flex items-center justify-center bg-white px-4">
       <div className="w-full max-w-md bg-white shadow-2xl rounded-2xl p-8">
         {/* Title */}
         <div className="flex items-center justify-center mb-6">
@@ -65,14 +65,12 @@ function ConfirmPassword() {
             className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
             Reset Password
           </button>
+
           {/* Back to Login */}
-          <p className=" text-sm text-center mt-4">
-            <span className="text-gray-600">Remember your password?</span>{" "}
-            <Link to="/" className="">
-              <span className="text-blue-700 hover:underline underline-offset-2">
-                {" "}
-                Back to Login
-              </span>
+          <p className="text-sm text-center text-gray-600 mt-4">
+            Remember your password?{" "}
+            <Link to="/form/login" className="text-blue-600 hover:underline">
+              Back to Login
             </Link>
           </p>
         </form>

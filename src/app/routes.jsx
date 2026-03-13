@@ -3,7 +3,6 @@ import Home from "../pages/home";
 import About from "../pages/about";
 import Contact from "../pages/Contact";
 import Courses from "../pages/Courses";
-// import Location from '../pages/Location'
 import VdoGuide from "../pages/VdoGuide";
 import Login from "../dashboard/pages/auth/Login";
 import VerificationEmail from "../public-site/pages/VerificationEmail";
@@ -13,6 +12,7 @@ import Instructor from "../public-site/pages/Instructor";
 import ConfirmOTP from "../services/ConfirmOTP";
 import Nav from "../components/layout/nav";
 import Footer from "../public-site/layout/Footer";
+import Form from "../services/Form";
 
 // Layout component that wraps pages with Nav and Footer
 const Layout = ({ children }) => {
@@ -61,7 +61,6 @@ function AppRoutes() {
           </Layout>
         }
       />
-      {/* <Route path='/location' element={<Layout><Location /></Layout>} /> */}
       <Route
         path="/vdoguide"
         element={
@@ -85,7 +84,8 @@ function AppRoutes() {
       <Route path="/admin/login" element={<Login />} />
       <Route path="/reset-email-preview" element={<ResetPasswordEmail />} />
       <Route path="/ConfirmOTP" element={<ConfirmOTP />} />
-
+      <Route path='/form/*' element={<Form />} />
+      
       {/* Fallback route */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

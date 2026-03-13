@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Key } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ForgotPassword() {
   return (
@@ -7,10 +8,12 @@ export default function ForgotPassword() {
       
       {/* Back to Login */}
       <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg mb-4">
-        <a
-          href="#" className="text-sm sm:text-base text-gray-600 hover:text-blue-600 flex items-center gap-2">
+        <Link
+          to="/form/login"
+          className="text-sm sm:text-base text-gray-600 hover:text-blue-600 flex items-center gap-2"
+        >
           ← Back to Login
-        </a>
+        </Link>
       </div>
 
       {/* Card */}
@@ -50,12 +53,13 @@ export default function ForgotPassword() {
             </div>
           </div>
 
-          <button
-            type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition duration-200 text-sm sm:text-base"
+          {/* Go to Reset Email Page */}
+          <Link
+            to="/form/reset-email"
+            className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition duration-200 text-sm sm:text-base"
           >
             Send Reset Link
-          </button>
+          </Link>
         </form>
 
         <div className="border-t my-6"></div>

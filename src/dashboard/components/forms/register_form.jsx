@@ -1,7 +1,18 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import registerImage from "../../../assets/images/register_image.png";
 import microsoft from "../../../assets/images/microsoft_image.png";
+
 export default function Register() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically handle the registration logic
+    // For now, we'll just navigate to the home page
+    navigate("/");
+  };
+
   return (
 
     <div className="min-h-screen w-full sm:w-[90%] m-auto flex rounded-xl mt-5 justify-center">
@@ -48,9 +59,9 @@ export default function Register() {
 
           <p className="text-gray-500 mb-6 text-center">
             Already have an account?{" "}
-            <a href="#" className="text-blue-600 font-medium hover:underline">
+            <Link to="/form/login" className="text-blue-600 font-medium hover:underline">
               Log in
-            </a>
+            </Link>
           </p>
 
           {/* Social Buttons */}
@@ -81,7 +92,7 @@ export default function Register() {
           </div>
 
           {/* FORM */}
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium mb-1">Username</label>
               <input
