@@ -25,11 +25,11 @@ function App() {
     <>
       <BrowserRouter>
         {/* <AppRoutes /> */}
-        <Design_page_forgot_password/>
+        {/* <Design_page_forgot_password/>
         <ResetPasswordEmail/>
-        <VerificationEmail/>
+        <VerificationEmail/> */}
         <ConfirmOTP/>
-        <ConfirmPassword/>
+        {/* <ConfirmPassword/>
         <Login/>
         <Contact/>
         <Instructor/>
@@ -41,7 +41,7 @@ function App() {
         <About_topsection/>
         <About/>
         <HeroSection/>
-        <VideoSection/>
+        <VideoSection/> */}
       </BrowserRouter>
 
     </>
