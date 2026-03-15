@@ -1,4 +1,3 @@
-
 const instructors = [
   {
     id: 1,

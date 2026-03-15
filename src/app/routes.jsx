@@ -9,6 +9,7 @@ import Popular_Courses from '../public-site/pages/Popular_Courses'
 import Instructor from '../public-site/pages/Instructor'
 
 import ConfirmOTP from '../services/ConfirmOTP';
+import { User } from 'lucide-react';
 
 
 function AppRoutes() {
@@ -20,6 +21,7 @@ function AppRoutes() {
       <Route path='/design_popular_course_and_instructor' element={<><Popular_Courses /><Instructor /></>} />
       <Route path='/admin/login' element={<Login />} />
       <Route path='/reset-email-preview' element={<ResetPasswordEmail />} />
+      <Route path='/User' element={<User />} />
 
       <Route path='*' element={<Navigate to='/' replace />} />
 

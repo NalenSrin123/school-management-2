@@ -21,6 +21,8 @@ import About from '../public-site/pages/About';
 import Header from '../dashboard/layout/Header';
 import HeroSection from '../public-site/components/HeroSection';
 import VideoSection from '../public-site/components/VideoSection';
+import User from '../public-site/pages/User';
+
 
 function App() {
   return (
@@ -44,6 +46,7 @@ function App() {
         <About/>
         <HeroSection/>
         <VideoSection/>
+        <User/>
       </BrowserRouter>
 
     </>
