@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 
 function ConfirmPassword() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-white px-4">
@@ -61,7 +62,8 @@ function ConfirmPassword() {
 
           {/* Button */}
           <button
-            type="submit"
+            type="button"
+            onClick={() => navigate("/form/login")}
             className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
             Reset Password
           </button>

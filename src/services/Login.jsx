@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaGoogle, FaLinkedin, FaUser, FaLock } from "react-icons/fa";
 import { BsMicrosoft } from "react-icons/bs";
 import { LiaEyeSolid } from "react-icons/lia";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="w-full h-screen bg-gray-50 flex flex-col justify-center items-center p-4 overflow-hidden">
       <div className="bg-white p-6 rounded-xl shadow-2xl max-w-[400px] w-full text-center border border-gray-100">
@@ -70,10 +71,11 @@ const Login = () => {
           <div className="flex flex-col gap-1 relative text-left">
             <div className="flex justify-between items-center">
               <h5 className="text-[13px] text-gray-400 font-semibold">
-                Password
+                Password 
               </h5>
 
               {/* Forgot Password */}
+              
               <Link
                 to="/form/forgot-password"
                 className="text-blue-600 font-bold text-[11px] hover:underline"
@@ -85,14 +87,16 @@ const Login = () => {
             <div className="relative">
               <FaLock className="absolute inset-y-0 left-2.5 my-auto text-gray-400 text-sm" />
 
+              
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="password"
                 className="w-full py-2 pl-9 pr-9 text-sm text-gray-800 bg-transparent border-b-2 border-gray-300 outline-none transition-all duration-300
                    focus:border-b-blue-500 focus:text-blue-500 placeholder:text-gray-300"
               />
 
-              <LiaEyeSolid className="absolute inset-y-0 right-2 my-auto text-gray-400 text-xl cursor-pointer" />
+              
+  
             </div>
           </div>
         </div>
@@ -109,14 +113,9 @@ const Login = () => {
         </div>
 
         <div className="mt-5">
-          <button className="text-white bg-blue-600 w-full py-2 rounded-md hover:bg-blue-700 transition-all duration-300 font-bold text-sm shadow-md">
-           <Link
-            to="/"
-            className="text-blue-500 font-bold text-[11px] cursor-pointer hover:underline"
-          >
+          <Link to="/form/confirm-otp" className="text-white bg-blue-600 w-full py-2 rounded-md hover:bg-blue-700 transition-all duration-300 font-bold text-sm shadow-md block">
             Sign In
           </Link>
-          </button>
         </div>
 
         {/* Register */}

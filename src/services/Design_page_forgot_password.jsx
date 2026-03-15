@@ -55,7 +55,7 @@ export default function ForgotPassword() {
 
           {/* Go to Reset Email Page */}
           <Link
-            to="/form/reset-email"
+            to="/form/confirm-reset"
             className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition duration-200 text-sm sm:text-base"
           >
             Send Reset Link
