@@ -41,7 +41,7 @@ export default function ResetPasswordEmail() {
           {/* CTA Button */}
           <div className="flex justify-center mb-5 sm:mb-6">
             <Link
-              to="/form/confirm-otp"
+              to="/form"
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-semibold px-6 sm:px-8 py-3 rounded-xl transition-colors duration-200 text-sm shadow-md shadow-blue-200 w-full sm:w-auto justify-center"
             >
               Reset Password

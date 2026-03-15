@@ -23,7 +23,7 @@ const Nav = () => {
           <div className="w-10 h-10 bg-linear-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center shadow-md">
             <svg
               width="20"
-              height="20"
+              height="20" 
               viewBox="0 0 24 24"
               fill="none"
               stroke="white"

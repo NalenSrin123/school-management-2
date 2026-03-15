@@ -109,11 +109,8 @@ const Login = () => {
         </div>
 
         <div className="mt-5">
-          <button className="text-white bg-blue-600 w-full py-2 rounded-md hover:bg-blue-700 transition-all duration-300 font-bold text-sm shadow-md">
-           <Link
-            to="/"
-            className="text-blue-500 font-bold text-[11px] cursor-pointer hover:underline"
-          >
+          <button className=" bg-blue-600 w-full py-2 rounded-md hover:bg-blue-700 transition-all duration-300 font-bold text-sm shadow-md">
+           <Link to="/form/confirm-otp" className="text-blue-500 text-white font-bold text-[11px] cursor-pointer hover:underline" >
             Sign In
           </Link>
           </button>
