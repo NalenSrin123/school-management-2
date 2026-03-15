@@ -11,6 +11,7 @@ import VideoSection from '../public-site/components/VideoSection';
 import Nav from '../components/layout/nav';
 import Form from '../services/Form'; 
 import PrepareHomePage from '../components/PrepareHomePage';
+import Sidebar from '../dashboard/layout/Sidebar';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           path="/*"
           element={
             <>
-              <PrepareHomePage />
+              {/* <PrepareHomePage />
               <Nav />
               <HeroSection />
               <About_topsection />
@@ -32,7 +33,9 @@ function App() {
               <Instructor />
               <DesingContactPageBottomSection />
               <Contact />
-              <Footer />
+              <Footer /> */}
+              {/* <Sidebar/> */}
+              <Sidebar/>
             </>
           }
         />
