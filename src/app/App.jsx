@@ -10,6 +10,7 @@ import HeroSection from '../public-site/components/HeroSection';
 import VideoSection from '../public-site/components/VideoSection';
 import Nav from '../components/layout/nav';
 import Form from '../services/Form'; 
+import PrepareHomePage from '../components/PrepareHomePage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           path="/*"
           element={
             <>
+              <PrepareHomePage />
               <Nav />
               <HeroSection />
               <About_topsection />
