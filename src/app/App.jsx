@@ -11,11 +11,15 @@ import VideoSection from '../public-site/components/VideoSection';
 import Nav from '../components/layout/nav';
 import Form from '../services/Form'; 
 import PrepareHomePage from '../components/PrepareHomePage';
+import FormCreateUser from '../public-site/pages/FormCreateUser';
+import ResetPasswordEmail from '../public-site/pages/ResetPasswordEmail';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/FormCreateUser" element={<FormCreateUser/>} />
+        <Route path="/resetpaa" element={<ResetPasswordEmail/>} />
         <Route path="/form/*" element={<Form />} />
         <Route path="/form" element={<Navigate to="/form/login" replace />} />
         <Route
