@@ -82,7 +82,7 @@ function AppRoutes() {
         }
       />
       <Route path="/admin/login" element={<Login />} />
-      <Route path="/reset-email-preview" element={<ResetPasswordEmail />} />
+      <Route path="/src/public-site/pages/reset-email-preview" element={<ResetPasswordEmail />} />
       <Route path="/ConfirmOTP" element={<ConfirmOTP />} />
       <Route path='/form/*' element={<Form />} />
       
