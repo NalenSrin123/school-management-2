@@ -136,7 +136,7 @@ const ConfirmOTP = () => {
         )}
 
         <button 
-          onClick={() => navigate('/form/confirm-reset')}
+          onClick={() => navigate('/')}
           className="w-full bg-[#1D4ED8] hover:bg-blue-700 text-white font-bold py-3 sm:py-4 rounded-xl shadow-lg shadow-blue-100 transition-all text-base mb-8"
         >
           Continue to Reset Password
