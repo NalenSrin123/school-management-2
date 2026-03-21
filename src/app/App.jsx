@@ -7,6 +7,7 @@ import About from '../public-site/pages/About';
 import Courses from '../pages/Courses';
 import VideoSection from '../public-site/components/VideoSection';
 import Contact from '../pages/Contact';
+import Roadmap_form from '../dashboard/components/forms/Roadmap_form';
 function App() {
   return (
     <BrowserRouter>
@@ -29,6 +30,7 @@ function App() {
         </main>
 
         {/* Footer */}
+        <Roadmap_form/>
         <Footer />
 
       </div>
