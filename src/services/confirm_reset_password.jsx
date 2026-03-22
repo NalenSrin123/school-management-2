@@ -3,9 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 
 function ConfirmPassword() {
-  
-  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+
+
 
   const handleSubmit = (event) => {
     event.preventDefault();

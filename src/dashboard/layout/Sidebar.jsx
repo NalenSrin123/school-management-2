@@ -31,7 +31,19 @@ function Sidebar() {
           <li>
             <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
-              <span className="font-medium">Students</span>
+              <span className="font-medium">Users</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+              <PiStudentFill className="text-xl group-hover:scale-110" />
+              <span className="font-medium">Road Maps</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+              <PiStudentFill className="text-xl group-hover:scale-110" />
+              <span className="font-medium">Video Guide Line</span>
             </a>
           </li>
           <li>
