@@ -3,8 +3,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 
 function ConfirmPassword() {
+  
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // This component is rendered under /form/confirm-reset, so navigate back to the form login route.
+    navigate("/form/login");
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-white px-4">
@@ -23,7 +30,7 @@ function ConfirmPassword() {
           Enter your new password below
         </p>
 
-        <form className="space-y-5">
+        <form className="space-y-5" onSubmit={handleSubmit}>
           {/* New Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">

@@ -8,7 +8,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="w-full h-screen bg-gray-50 flex flex-col justify-center items-center p-4 overflow-hidden">
-      <div className="bg-white p-6 rounded-xl shadow-2xl max-w-[400px] w-full text-center border border-gray-100">
+      <div className="bg-white p-6 rounded-xl shadow-2xl max-w-100 w-full text-center border border-gray-100">
         <div className="w-14 h-14 mx-auto flex items-center justify-center mb-2">
           <img src="/eteclogo.png" alt="ETEC Logo" className="w-full object-contain" />
         </div>
@@ -28,18 +28,6 @@ const Login = () => {
             <FaGoogle className="absolute left-4 text-lg text-blue-500" />
             <span>Continue with Google</span>
           </button>
-
-          <div className="flex gap-3">
-            <button className="relative flex items-center justify-center w-full border border-gray-200 py-2 rounded-lg hover:bg-gray-50 transition-all font-medium text-xs">
-              <BsMicrosoft className="absolute left-3 text-blue-500" />
-              <span className="ml-4">Microsoft</span>
-            </button>
-
-            <button className="relative flex items-center justify-center w-full border border-gray-200 py-2 rounded-lg hover:bg-gray-50 transition-all font-medium text-xs">
-              <FaLinkedin className="absolute left-3 text-lg text-blue-700" />
-              <span className="ml-4">LinkedIn</span>
-            </button>
-          </div>
         </div>
 
         <div className="flex items-center my-4 w-full">
@@ -95,7 +83,13 @@ const Login = () => {
                    focus:border-b-blue-500 focus:text-blue-500 placeholder:text-gray-300"
               />
 
-              
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute inset-y-0 right-2.5 my-auto text-gray-400 hover:text-gray-600 transition-all"
+              >
+                <LiaEyeSolid className="text-sm" />
+              </button>
   
             </div>
           </div>
