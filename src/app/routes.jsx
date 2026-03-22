@@ -13,6 +13,7 @@ import ConfirmOTP from "../services/ConfirmOTP";
 import Nav from "../components/layout/nav";
 import Footer from "../public-site/layout/Footer";
 import Form from "../services/Form";
+import Course from "../dashboard/components/tables/Course";
 
 // Layout component that wraps pages with Nav and Footer
 const Layout = ({ children }) => {
@@ -85,7 +86,7 @@ function AppRoutes() {
       <Route path="/src/public-site/pages/reset-email-preview" element={<ResetPasswordEmail />} />
       <Route path="/ConfirmOTP" element={<ConfirmOTP />} />
       <Route path='/form/*' element={<Form />} />
-      <Route path="/course" element={<Courses/>}></Route>
+      <Route path="/course" element={<Course/>}></Route>
       
       {/* Fallback route */}
       <Route path="*" element={<Navigate to="/" replace />} />
