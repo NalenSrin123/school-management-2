@@ -15,7 +15,7 @@ function App() {
       <div className="flex flex-col min-h-screen">
 
         {/* Navbar */}
-        <Nav />
+        {/* <Nav /> */}
 
         {/* Main content */}
         <main className="flex-1 p-4">
@@ -32,7 +32,7 @@ function App() {
         </main>
 
         {/* Footer */}
-        <Footer />
+        {/* <Footer /> */}
 
       </div>
     </BrowserRouter>
