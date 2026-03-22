@@ -8,6 +8,7 @@ import Courses from '../pages/Courses';
 import VideoSection from '../public-site/components/VideoSection';
 import Contact from '../pages/Contact';
 import Roadmap_form from '../dashboard/components/forms/Roadmap_form';
+import Sidebar from '../dashboard/layout/Sidebar';
 function App() {
   return (
     <BrowserRouter>
@@ -26,11 +27,11 @@ function App() {
             <Route path="/vdoguide" element={<VideoSection />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/*" element={<PrepareHomePage />} />
+            <Route path="/dashboard" element={<Sidebar />} />
           </Routes>
         </main>
 
         {/* Footer */}
-        <Roadmap_form/>
         <Footer />
 
       </div>
