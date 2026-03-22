@@ -1,6 +1,8 @@
 import { CheckCircle, Calendar, Plus, Pencil, Trash2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
+  const navigate = useNavigate();
   const courses = [
     {
       id: "1",
@@ -59,7 +61,10 @@ export default function App() {
       <div className="bg-white rounded-xl shadow p-10">
         <div className="flex justify-between items-center mb-4">
           <h2 className="font-semibold text-lg">RoadMaps</h2>
-          <button className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg">
+          <button 
+            onClick={() => navigate('/dashboard/roadmap/create')}
+            className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg"
+          >
             <Plus size={16} /> Create RoadMap
           </button>
         </div>
