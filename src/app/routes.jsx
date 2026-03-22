@@ -85,6 +85,7 @@ function AppRoutes() {
       <Route path="/src/public-site/pages/reset-email-preview" element={<ResetPasswordEmail />} />
       <Route path="/ConfirmOTP" element={<ConfirmOTP />} />
       <Route path='/form/*' element={<Form />} />
+      <Route path="/course" element={<Courses/>}></Route>
       
       {/* Fallback route */}
       <Route path="*" element={<Navigate to="/" replace />} />
