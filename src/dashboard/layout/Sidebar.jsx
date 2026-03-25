@@ -6,7 +6,7 @@ import { MdHome } from "react-icons/md";
 
 function Sidebar() {
   return (
-    <div className="w-64 h-screen bg-blue-950 text-white p-8 flex flex-col shadow-xl fixed top-0 left-0">
+    <div className="w-64 h-screen bg-blue-950 text-white p-8 flex flex-col shadow-xl">
       {/* Top Section */}
       <div className="text-center mb-10">
         <h1 className="text-5xl mb-2">🎓</h1>

@@ -6,6 +6,8 @@ function ConfirmPassword() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     // This component is rendered under /form/confirm-reset, so navigate back to the form login route.
@@ -68,7 +70,8 @@ function ConfirmPassword() {
 
           {/* Button */}
           <button
-            type="submit"
+            type="button"
+            onClick={() => navigate("/form/login")}
             className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
             Reset Password
           </button>
