@@ -16,12 +16,13 @@ function AppContent() {
 
 
   const isDashboard = location.pathname.startsWith('/dashboard');
+   const isAuthPage = location.pathname.startsWith('/form');
 
   return (
     <div className="flex flex-col min-h-screen">
 
     
-      {!isDashboard && <Nav />}
+       {!isDashboard && !isAuthPage && <Nav />}
 
       <main className="flex-1 p-4">
         <Routes>
@@ -58,7 +59,7 @@ function AppContent() {
         </Routes>
       </main>
 
-      {!isDashboard && <Footer />}
+      {!isDashboard && !isAuthPage && <Footer />}
 
     </div>
   );
