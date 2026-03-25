@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const initialInvoices = [
   { id: 1, invoice: "1001", company: "Tech Jungle", dueDate: "14 Sep 2022", status: "Unpaid", amount: 973.48 },
@@ -145,6 +146,7 @@ export default function User() {
   const [sortDir, setSortDir] = useState("asc");
   const [showModal, setShowModal] = useState(false);
   const [toast, setToast] = useState(null);
+  const navigate = useNavigate();
 
   const showToast = (msg, color = "green") => {
     setToast({ msg, color });
@@ -274,7 +276,7 @@ export default function User() {
           </div>
 
           {/* Add button */}
-          <button onClick={() => setShowModal(true)}
+          <button onClick={() => navigate("/dashboard/formcreateuser")}
             className="flex items-center gap-1.5 px-5 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold shadow transition-colors">
             <PlusIcon /> Add
           </button>
