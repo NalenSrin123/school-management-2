@@ -10,7 +10,7 @@ const PrepareHomePage = () => {
         <Nav />
         <HeroSection />
         <Popular_Courses />
-        <Instructor />
+        {/* <Instructor /> */}
     </div>
   )
 }
