@@ -1,22 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import registerImage from "../../../assets/images/register_image.png";
 import microsoft from "../../../assets/images/microsoft_image.png";
 
 export default function Register() {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically handle the registration logic
-    // For now, we'll just navigate to the home page
-    navigate("/");
+
+    try {
+      // FIX 1: Use https and ensure the URL is exactly as the API expects
+      const res = await fetch("https://school-management-2-5-main-cdrucp.laravel.cloud/api/register", { 
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json", // FIX 2: Essential for Laravel APIs
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+          role_id: 1, 
+        }),
+      });
+
+      const data = await res.json();
+
+      console.log("Response:", data);
+
+      // FIX 3: res.ok catches any 2xx status code
+      if (res.ok) {
+        alert("Register Success");
+        navigate("/form/login");
+      } else {
+        // If there's a validation error (like email taken), Laravel sends it in data.errors or data.message
+        alert(data.message || "Register Failed");
+      }
+
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Network Error: Please check your internet or CORS settings.");
+    }
   };
 
   return (
 
     <div className="min-h-screen w-full sm:w-[90%] m-auto flex rounded-xl mt-5 justify-center">
-      
+
       {/* LEFT SIDE */}
       <div className="hidden md:flex lg:w-[40%] relative">
         <img
@@ -97,6 +140,8 @@ export default function Register() {
               <label className="block text-sm font-medium mb-1">Username</label>
               <input
                 type="text"
+                name="name"
+                onChange={handleChange}
                 placeholder="username"
                 className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
@@ -108,6 +153,8 @@ export default function Register() {
               </label>
               <input
                 type="email"
+                name="email"
+                onChange={handleChange}
                 placeholder="email@school.edu"
                 className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
@@ -117,6 +164,8 @@ export default function Register() {
               <label className="block text-sm font-medium mb-1">Password</label>
               <input
                 type="password"
+                name="password"
+                onChange={handleChange}
                 placeholder="Password"
                 className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
