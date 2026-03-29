@@ -3,6 +3,7 @@ import { PiStudentFill } from "react-icons/pi";
 import { SiGoogleclassroom } from "react-icons/si";
 import { IoIosLogOut } from "react-icons/io";
 import { MdHome } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
@@ -29,9 +30,21 @@ function Sidebar() {
             </a>
           </li>
           <li>
+            <Link to="/dashboard/user" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+              <PiStudentFill className="text-xl group-hover:scale-110" />
+              <span className="font-medium">Users</span>
+            </Link>
+          </li>
+          <li>
             <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
-              <span className="font-medium">Students</span>
+              <span className="font-medium">Road Maps</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+              <PiStudentFill className="text-xl group-hover:scale-110" />
+              <span className="font-medium">Video Guide Line</span>
             </a>
           </li>
           <li>

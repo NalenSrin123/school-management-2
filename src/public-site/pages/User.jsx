@@ -8,9 +8,7 @@ const initialInvoices = [
   { id: 5, invoice: "1005", company: "Tech Jungle", dueDate: "14 Sep 2022", status: "Unpaid", amount: 7094.45 },
   { id: 6, invoice: "1006", company: "Tech Jungle", dueDate: "14 Sep 2022", status: "Paid", amount: 4599.75 },
   { id: 7, invoice: "1007", company: "Tech Jungle", dueDate: "14 Sep 2022", status: "Paid", amount: 804.56 },
-  { id: 8, invoice: "1008", company: "Nova Corp", dueDate: "20 Oct 2022", status: "Archived", amount: 320.00 },
-  { id: 9, invoice: "1009", company: "BlueWave", dueDate: "01 Nov 2022", status: "Unpaid", amount: 2150.00 },
-  { id: 10, invoice: "1010", company: "BlueWave", dueDate: "05 Nov 2022", status: "Archived", amount: 540.00 },
+  { id: 8, invoice: "1008", company: "Tech Jungle", dueDate: "14 Sep 2022", status: "Unpaid", amount: 1200.00 },
 ];
 
 const TABS = [
@@ -211,7 +209,7 @@ export default function User() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-start justify-center p-4 sm:p-6 lg:p-8 font-sans">
+    <div className="min-h-screen w-screen bg-gray-100 flex items-start justify-center p-4 sm:p-6 lg:p-8 font-sans">
       {/* Toast */}
       {toast && (
         <div className={`fixed top-5 right-5 z-50 px-5 py-3 rounded-xl shadow-lg text-white text-sm font-medium transition-all
