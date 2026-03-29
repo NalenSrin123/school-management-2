@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div className="w-64 h-screen bg-blue-950 text-white p-8 flex flex-col shadow-xl">
+    <div className="fixed w-64 h-screen bg-blue-950 text-white p-8 flex flex-col shadow-xl">
       {/* Top Section */}
       <div className="text-center mb-10">
         <h1 className="text-5xl mb-2">🎓</h1>
@@ -18,12 +18,12 @@ function Sidebar() {
       <nav className="flex-1 flex flex-col justify-center">
         <ul className="space-y-4">
           <li>
-            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <a href="#" className="flex items-center justify-start gap-3 px-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <MdHome className="text-xl group-hover:scale-110"/>
               <span className="font-medium">Overview</span>
             </a>
           </li>
-          <li className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+          <li className="flex items-center justify-start gap-3 px-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <Link to={"/course"}>
               <div className="flex gap-2">
                 <SiGoogleclassroom className="text-xl group-hover:scale-110" />
@@ -31,25 +31,25 @@ function Sidebar() {
               </div></Link>
           </li>
           <li>
-            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <a href="#" className="flex items-center justify-start gap-3 px-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Users</span>
             </a>
           </li>
           <li>
-            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <a href="#" className="flex items-center justify-start gap-3 px-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Road Maps</span>
             </a>
           </li>
           <li>
-            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <a href="#" className="flex items-center justify-start gap-3 px-2 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Video Guide Line</span>
             </a>
           </li>
           <li>
-            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <a href="#" className="flex items-center justify-start gap-3 px-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <IoSettingsSharp className="text-xl group-hover:scale-110" />
               <span className="font-medium">Settings</span>
             </a>

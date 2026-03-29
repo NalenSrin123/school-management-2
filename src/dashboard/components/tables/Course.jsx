@@ -26,11 +26,18 @@ function Course() {
       image: "https://i.pinimg.com/1200x/6c/bd/6f/6cbd6fba4b311be43812613d0fdb1762.jpg",
       created_at: "2026-03-05",
       updated_at: "2026-03-15",
+    },{
+      id: 4,
+      name: "C/C++",
+      description: "-----------------------------",
+      image: "https://i.pinimg.com/1200x/6c/bd/6f/6cbd6fba4b311be43812613d0fdb1762.jpg",
+      created_at: "2026-03-05",
+      updated_at: "2026-03-15",
     },
   ];
 
   return (
-    <div className="p-4 sm:p-6 bg-gray-100 min-h-screen">
+    <div className="p-4 sm:p-6 bg-gray-100 min-h-screen ml-62">
       <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md">
 
         {/* Header */}
