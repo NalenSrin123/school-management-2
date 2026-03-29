@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation, Outlet } from 'react-router-dom';
 import Nav from '../components/layout/nav';
 import Footer from '../public-site/layout/Footer';
 import Form from '../services/Form';
@@ -10,6 +10,7 @@ import VideoSection from '../public-site/components/VideoSection';
 import Contact from '../pages/Contact';
 import Sidebar from '../dashboard/layout/Sidebar';
 import User from '../public-site/pages/User';
+import VideoGuidlineLayout from '../dashboard/layout/VideoGuidlineLayout';
 function App() {
   return (
     <BrowserRouter>
@@ -37,6 +38,7 @@ function App() {
         }>
           <Route path="user" element={<User />} />
           <Route path="nnnn" element={<div>NNNN</div>} />
+          <Route path="Video" element={<VideoGuidlineLayout />} />
         </Route>
           <Route path="/*" element={<PrepareHomePage />} />
             
