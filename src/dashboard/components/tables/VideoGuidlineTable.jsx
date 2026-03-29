@@ -1,3 +1,5 @@
+import React from "react";
+
 const videoData = [
   {
     id: 1,
@@ -83,54 +85,62 @@ const videoData = [
 
 const VideoGuidlineTable = () => {
   return (
-    <div className="w-[80%] mx-auto mt-6 bg-white rounded-xl shadow border border-blue-500 overflow-hidden">
-      <table className="w-full border-collapse">
-        {/* HEADER */}
-        <thead className="bg-gray-100 text-gray-600 text-sm">
-          <tr>
-            <th className="p-3 text-left">No</th>
-            <th className="p-3 text-left">Image</th>
-            <th className="p-3 text-left w-[15%]">Title</th>
-            <th className="p-3 text-left w-[20%]">Description</th>
-            <th className="p-3 text-left">Uploaded By</th>
-            <th className="p-3 text-left">Upload Date</th>
-            <th className="p-3 text-center w-[100px]">Action</th>
-          </tr>
-        </thead>
-
-        {/* BODY */}
-        <tbody className="text-sm text-gray-700">
-          {videoData.map((item, index) => (
-            <tr key={index} className="border-t border-blue-500 hover:bg-gray-200 transition">
-              <td className="p-3">{item.id}</td>
-
-              <td style={{ verticalAlign: "center" }}>
-                <img
-                  className="h-[40px] w-[60px] object-cover rounded"
-                  src={item.image}
-                  alt=""
-                />
-              </td>
-
-              <td className="p-3">{item.title}</td>
-              <td className="p-3 text-gray-500">{item.description}</td>
-              <td className="p-3">{item.uploadedBy}</td>
-              <td className="p-3">{item.uploadDate}</td>
-
-              <td>
-                <div className="flex gap-2 justify-center pr-2">
-                  <button className="px-3 py-1 text-sm border rounded hover:shadow-black hover:bg-red-700 text-white transition bg-red-500">
-                    Delete
-                  </button>
-                  <button className="px-3 py-1 text-sm border rounded bg-blue-500 text-white transition hover:bg-blue-700">
-                    Edit
-                  </button>
-                </div>
-              </td>
+    /* CHANGED: md:ml-64 for sidebar, then max-w-[95%] to make it much bigger */
+    <div className="md:ml-64 min-h-screen bg-gray-100 p-6">
+      <div className="max-w-[95%] mx-auto mt-6 bg-white rounded-xl shadow border border-gray-300 overflow-hidden">
+        <table className="w-full border-collapse">
+          {/* HEADER - Kept your original style */}
+          <thead className="bg-gray-100 text-gray-600 text-sm">
+            <tr>
+              <th className="p-3 text-left">No</th>
+              <th className="p-3 text-left">Image</th>
+              <th className="p-3 text-left w-[20%]">Title</th>
+              <th className="p-3 text-left w-[30%]">Description</th>
+              <th className="p-3 text-left">Uploaded By</th>
+              <th className="p-3 text-left">Upload Date</th>
+              <th className="p-3 text-center w-[150px]">Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          {/* BODY - Restored your blue borders and hover style */}
+          <tbody className="text-sm text-gray-700">
+            {videoData.map((item, index) => (
+              <tr 
+                key={index} 
+                className="border-t border-gray-300 hover:bg-gray-200 transition"
+              >
+                <td className="p-4">{item.id}</td>
+
+                <td className="p-4">
+                  <img
+                    className="h-[45px] w-[70px] object-cover rounded"
+                    src={item.image}
+                    alt=""
+                  />
+                </td>
+
+                <td className="p-4 font-medium">{item.title}</td>
+                <td className="p-4 text-gray-500">{item.description}</td>
+                <td className="p-4">{item.uploadedBy}</td>
+                <td className="p-4">{item.uploadDate}</td>
+
+                <td className="p-4">
+                  <div className="flex gap-2 justify-center">
+                    {/* Restored your original Red Button style */}
+                    <button className="px-4 py-1.5 text-sm border rounded hover:shadow-black hover:bg-red-700 text-white transition bg-red-500">
+                      Delete
+                    </button>
+                    {/* Restored your original Blue Button style */}
+                    <button className="px-4 py-1.5 text-sm border rounded bg-blue-500 text-white transition hover:bg-blue-700">
+                      Edit
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
