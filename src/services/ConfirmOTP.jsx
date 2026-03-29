@@ -135,12 +135,14 @@ const ConfirmOTP = () => {
           </div>
         )}
 
+        
         <button 
           onClick={() => navigate('/')}
           className="w-full bg-[#1D4ED8] hover:bg-blue-700 text-white font-bold py-3 sm:py-4 rounded-xl shadow-lg shadow-blue-100 transition-all text-base mb-8"
         >
           Continue to Reset Password
         </button>
+       
 
         <div className="text-center mb-8 sm:mb-10">
           <p className="text-slate-400 text-xs mb-2">Didn't receive the code?</p>

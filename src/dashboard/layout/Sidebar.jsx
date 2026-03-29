@@ -3,11 +3,16 @@ import { PiStudentFill } from "react-icons/pi";
 import { SiGoogleclassroom } from "react-icons/si";
 import { IoIosLogOut } from "react-icons/io";
 import { MdHome } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Sidebar() {
+  // បង្កើត Style សម្រាប់ប៊ូតុងដែលកំពុង Active (ចុចជាប់)
+  const activeStyle =
+    "flex items-center justify-center gap-3 py-3 rounded-lg bg-white/20 transition-all group";
+  const normalStyle =
+    "flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/10 transition-all group";
   return (
-    <div className="fixed w-64 h-screen bg-blue-950 text-white p-8 flex flex-col shadow-xl">
+    <div className="w-64 h-screen fixed bg-blue-950 text-white p-8 flex flex-col shadow-xl">
       {/* Top Section */}
       <div className="text-center mb-10">
         <h1 className="text-5xl mb-2">🎓</h1>
@@ -18,41 +23,70 @@ function Sidebar() {
       <nav className="flex-1 flex flex-col justify-center">
         <ul className="space-y-4">
           <li>
-            <a href="#" className="flex items-center justify-start gap-3 px-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
-              <MdHome className="text-xl group-hover:scale-110"/>
+            <NavLink
+              to="/dashboard"
+              className={({ isActive }) =>
+                isActive ? activeStyle : normalStyle
+              }
+            >
+              <MdHome className="text-xl group-hover:scale-110" />
               <span className="font-medium">Overview</span>
-            </a>
-          </li>
-          <li className="flex items-center justify-start gap-3 px-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
-              <Link to={"/course"}>
-              <div className="flex gap-2">
-                <SiGoogleclassroom className="text-xl group-hover:scale-110" />
-              <span className="font-medium">Courses</span>
-              </div></Link>
+            </NavLink>
           </li>
           <li>
-            <a href="#" className="flex items-center justify-start gap-3 px-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <NavLink
+              to="/dashboard/courses"
+              className={({ isActive }) =>
+                isActive ? activeStyle : normalStyle
+              }
+            >
+              <SiGoogleclassroom className="text-xl group-hover:scale-110" />
+              <span className="font-medium">Courses</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/dashboard/users"
+              className={({ isActive }) =>
+                isActive ? activeStyle : normalStyle
+              }
+            >
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Users</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#" className="flex items-center justify-start gap-3 px-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <NavLink
+              to="/dashboard/roadmaps"
+              className={({ isActive }) =>
+                isActive ? activeStyle : normalStyle
+              }
+            >
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Road Maps</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#" className="flex items-center justify-start gap-3 px-2 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <NavLink
+              to="/dashboard/vdoguide"
+              className={({ isActive }) =>
+                isActive ? activeStyle : normalStyle
+              }
+            >
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Video Guide Line</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#" className="flex items-center justify-start gap-3 px-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <NavLink
+              to="/dashboard/settings"
+              className={({ isActive }) =>
+                isActive ? activeStyle : normalStyle
+              }
+            >
               <IoSettingsSharp className="text-xl group-hover:scale-110" />
               <span className="font-medium">Settings</span>
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>

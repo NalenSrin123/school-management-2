@@ -1,6 +1,8 @@
 import { CheckCircle, Calendar, Plus, Pencil, Trash2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
+  const navigate = useNavigate();
   const courses = [
     {
       id: "1",

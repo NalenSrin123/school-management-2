@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaGoogle, FaLinkedin, FaUser, FaLock } from "react-icons/fa";
 import { BsMicrosoft } from "react-icons/bs";
 import { LiaEyeSolid } from "react-icons/lia";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="w-full h-screen bg-gray-50 flex flex-col justify-center items-center p-4 overflow-hidden">
-      <div className="bg-white p-6 rounded-xl shadow-2xl max-w-[400px] w-full text-center border border-gray-100">
+      <div className="bg-white p-6 rounded-xl shadow-2xl max-w-100 w-full text-center border border-gray-100">
         <div className="w-14 h-14 mx-auto flex items-center justify-center mb-2">
           <img src="/eteclogo.png" alt="ETEC Logo" className="w-full object-contain" />
         </div>
@@ -27,18 +28,6 @@ const Login = () => {
             <FaGoogle className="absolute left-4 text-lg text-blue-500" />
             <span>Continue with Google</span>
           </button>
-
-          <div className="flex gap-3">
-            <button className="relative flex items-center justify-center w-full border border-gray-200 py-2 rounded-lg hover:bg-gray-50 transition-all font-medium text-xs">
-              <BsMicrosoft className="absolute left-3 text-blue-500" />
-              <span className="ml-4">Microsoft</span>
-            </button>
-
-            <button className="relative flex items-center justify-center w-full border border-gray-200 py-2 rounded-lg hover:bg-gray-50 transition-all font-medium text-xs">
-              <FaLinkedin className="absolute left-3 text-lg text-blue-700" />
-              <span className="ml-4">LinkedIn</span>
-            </button>
-          </div>
         </div>
 
         <div className="flex items-center my-4 w-full">
@@ -70,10 +59,11 @@ const Login = () => {
           <div className="flex flex-col gap-1 relative text-left">
             <div className="flex justify-between items-center">
               <h5 className="text-[13px] text-gray-400 font-semibold">
-                Password
+                Password 
               </h5>
 
               {/* Forgot Password */}
+              
               <Link
                 to="/form/forgot-password"
                 className="text-blue-600 font-bold text-[11px] hover:underline"
@@ -85,14 +75,22 @@ const Login = () => {
             <div className="relative">
               <FaLock className="absolute inset-y-0 left-2.5 my-auto text-gray-400 text-sm" />
 
+              
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="password"
                 className="w-full py-2 pl-9 pr-9 text-sm text-gray-800 bg-transparent border-b-2 border-gray-300 outline-none transition-all duration-300
                    focus:border-b-blue-500 focus:text-blue-500 placeholder:text-gray-300"
               />
 
-              <LiaEyeSolid className="absolute inset-y-0 right-2 my-auto text-gray-400 text-xl cursor-pointer" />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute inset-y-0 right-2.5 my-auto text-gray-400 hover:text-gray-600 transition-all"
+              >
+                <LiaEyeSolid className="text-sm" />
+              </button>
+  
             </div>
           </div>
         </div>
@@ -109,11 +107,9 @@ const Login = () => {
         </div>
 
         <div className="mt-5">
-          <button className=" bg-blue-600 w-full py-2 rounded-md hover:bg-blue-700 transition-all duration-300 font-bold text-sm shadow-md">
-           <Link to="/form/confirm-otp" className="text-blue-500 text-white font-bold text-[11px] cursor-pointer hover:underline" >
+          <Link to="/form/confirm-otp" className="text-white bg-blue-600 w-full py-2 rounded-md hover:bg-blue-700 transition-all duration-300 font-bold text-sm shadow-md block">
             Sign In
           </Link>
-          </button>
         </div>
 
         {/* Register */}
