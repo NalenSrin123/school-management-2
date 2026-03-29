@@ -9,6 +9,8 @@ import VideoSection from '../public-site/components/VideoSection';
 import Contact from '../pages/Contact';
 import Roadmap_form from '../dashboard/components/forms/Roadmap_form';
 import Sidebar from '../dashboard/layout/Sidebar';
+import Faq from '../public-site/pages/Faq';
+
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +30,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/*" element={<PrepareHomePage />} />
             <Route path="/dashboard" element={<Sidebar />} />
+            <Route path="/FAQ" element={<Faq />} />
+            
           </Routes>
         </main>
 

@@ -11,6 +11,7 @@ const Nav = () => {
     { name: "Courses", path: "/courses" },
     { name: "Video Guidline", path: "/vdoguide" },
     { name: "Contact Us", path: "/contact" },
+    { name: "FAQ", path: "/faq" },
   ];
 
   const isActive = (path) => location.pathname === path;
