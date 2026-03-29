@@ -1,5 +1,7 @@
+import Course from '../../components/tables/Course';
+
 function CourseList() {
-  return <div>CourseList</div>
+  return <Course />;
 }
 
-export default CourseList
+export default CourseList;

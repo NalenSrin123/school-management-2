@@ -22,52 +22,41 @@ function Sidebar() {
       <nav className="flex-1 flex flex-col justify-center">
         <ul className="space-y-4">
           <li>
-            <NavLink to="/overview" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <Link to="/dashboard" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <MdHome className="text-xl group-hover:scale-110"/>
               <span className="font-medium">Overview</span>
-            </NavLink>
+            </Link>
           </li>
+          {/* Courses */}
           <li>
-            <NavLink to="/courses" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <Link to="/dashboard/courses" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <SiGoogleclassroom className="text-xl group-hover:scale-110" />
               <span className="font-medium">Courses</span>
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <Link to="/dashboard/user" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <Link to="/dashboard/users" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Users</span>
             </Link>
           </li>
           <li>
-            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <Link to="/dashboard/roadmaps" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Road Maps</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <Link to="/dashboard/vdoguide" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Video Guide Line</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <NavLink to="/roadmaps" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
-              <PiStudentFill className="text-xl group-hover:scale-110" />
-              <span className="font-medium">Road Maps</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/Video" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
-              <PiStudentFill className="text-xl group-hover:scale-110" />
-              <span className="font-medium">Video Guide Line</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/settings" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <Link to="/dashboard/settings" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <IoSettingsSharp className="text-xl group-hover:scale-110" />
               <span className="font-medium">Settings</span>
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </nav>
