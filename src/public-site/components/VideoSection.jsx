@@ -9,7 +9,6 @@ const videos = [
   { id: 6, title: "Git & Github", category: "Tool", price: 6, url: "https://www.youtube.com/embed/qX30DbpSSjo" },
   { id: 7, title: "PHP", category: "Back-end", price: 35, url: "https://www.youtube.com/embed/zZ6vybT1HQs" },
   { id: 8, title: "Laravel12", category: "Back-end", price: 89, url: "https://www.youtube.com/embed/0M84Nk7iWkA" },
-  { id: 9, title: "Ux/Ui Design", category: "Web-design", price: 30, url: "https://www.youtube.com/embed/aC4W2A67PoY" },
 ];
 
 function VideoSection() {
