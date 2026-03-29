@@ -13,6 +13,8 @@ import ConfirmOTP from "../services/ConfirmOTP";
 import Nav from "../components/layout/nav";
 import Footer from "../public-site/layout/Footer";
 import Form from "../services/Form";
+import RoadMapLayout from "../dashboard/layout/RoadMapLayout";
+import RoadMap from "../dashboard/components/tables/RoadMap";
 
 // Layout component that wraps pages with Nav and Footer
 const Layout = ({ children }) => {
@@ -82,12 +84,16 @@ function AppRoutes() {
         }
       />
       <Route path="/admin/login" element={<Login />} />
-      <Route path="/src/public-site/pages/reset-email-preview" element={<ResetPasswordEmail />} />
+      <Route
+        path="/src/public-site/pages/reset-email-preview"
+        element={<ResetPasswordEmail />}
+      />
       <Route path="/ConfirmOTP" element={<ConfirmOTP />} />
-      <Route path='/form/*' element={<Form />} />
-      
+      <Route path="/form/*" element={<Form />} />
+
       {/* Fallback route */}
       <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="RoadMap" element={<RoadMap></RoadMap>} />
     </Routes>
   );
 }

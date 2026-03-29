@@ -23,12 +23,54 @@ export default function App() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSGNC7VRvaV_vIMuSS399Ou-LNG_yTz5RjdQ&s",
       des: "Html, css, ",
     },
+    {
+      id: "3",
+      name: "Web Design",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSGNC7VRvaV_vIMuSS399Ou-LNG_yTz5RjdQ&s",
+      des: "Html, css, ",
+    },
+    {
+      id: "3",
+      name: "Web Design",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSGNC7VRvaV_vIMuSS399Ou-LNG_yTz5RjdQ&s",
+      des: "Html, css, ",
+    },
+    {
+      id: "3",
+      name: "Web Design",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSGNC7VRvaV_vIMuSS399Ou-LNG_yTz5RjdQ&s",
+      des: "Html, css, ",
+    },
+    {
+      id: "3",
+      name: "Web Design",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSGNC7VRvaV_vIMuSS399Ou-LNG_yTz5RjdQ&s",
+      des: "Html, css, ",
+    },
+    {
+      id: "3",
+      name: "Web Design",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSGNC7VRvaV_vIMuSS399Ou-LNG_yTz5RjdQ&s",
+      des: "Html, css, ",
+    },
+    {
+      id: "3",
+      name: "Web Design",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSGNC7VRvaV_vIMuSS399Ou-LNG_yTz5RjdQ&s",
+      des: "Html, css, ",
+    },
   ];
 
   return (
-    <div className="w-[80%] min-h-screen bg-gray-100 p-6">
+    <div className="w-[100%] h-screen bg-gray-100 p-6 ">
       {/* Header */}
-      <div className="bg-white rounded-xl shadow p-6 mb-6">
+      <div className="bg-white rounded-xl shadow p-6 mb-6 h-[20%]">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-xl font-bold">RoadMaps</h1>
         </div>
@@ -56,7 +98,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="bg-white rounded-xl shadow p-10">
+      <div className="bg-white rounded-xl shadow p-10 h-[80%] overflow-auto">
         <div className="flex justify-between items-center mb-4">
           <h2 className="font-semibold text-lg">RoadMaps</h2>
           <button className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg">
@@ -64,7 +106,7 @@ export default function App() {
           </button>
         </div>
 
-        <table className="w-full text-sm">
+        <table className="w-full text-sm ">
           <thead className="text-gray-500 border-b">
             <tr className="text-left">
               <th className="w-[5%] py-2">No</th>
