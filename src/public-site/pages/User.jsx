@@ -213,7 +213,7 @@ export default function User() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-start justify-center p-4 sm:p-6 lg:p-8 font-sans">
+    <div className="min-h-screen w-screen bg-gray-100 flex items-start justify-center p-4 sm:p-6 lg:p-8 font-sans">
       {/* Toast */}
       {toast && (
         <div className={`fixed top-5 right-5 z-50 px-5 py-3 rounded-xl shadow-lg text-white text-sm font-medium transition-all
@@ -276,7 +276,7 @@ export default function User() {
           </div>
 
           {/* Add button */}
-          <button onClick={() => navigate("/dashboard/formcreateuser")}
+          <button onClick={() => setShowModal(true)}
             className="flex items-center gap-1.5 px-5 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold shadow transition-colors">
             <PlusIcon /> Add
           </button>

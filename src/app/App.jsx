@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Nav from '../components/layout/nav';
 import Footer from '../public-site/layout/Footer';
@@ -8,66 +9,45 @@ import Courses from '../pages/Courses';
 import VideoSection from '../public-site/components/VideoSection';
 import Contact from '../pages/Contact';
 import Sidebar from '../dashboard/layout/Sidebar';
-import RoadMap from '../dashboard/components/tables/RoadMap';
-
-function AppContent() {
-  const location = useLocation();
-
-
-  const isDashboard = location.pathname.startsWith('/dashboard');
-   const isAuthPage = location.pathname.startsWith('/form');
-
-  return (
-    <div className="flex flex-col min-h-screen">
-
-    
-       {!isDashboard && !isAuthPage && <Nav />}
-
-      <main className="flex-1 p-4">
-        <Routes>
-          <Route path="/form/*" element={<Form />} />
-          <Route path="/form" element={<Navigate to="/form/login" replace />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/vdoguide" element={<VideoSection />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/*" element={<PrepareHomePage />} />
-
-          <Route
-            path="/dashboard"
-            element={
-              <div className="flex">
-                <Sidebar />
-                <div className="flex-1 p-4">
-                  <RoadMap />
-                </div>
-              </div>
-            }
-          />
-          <Route
-            path="/dashboard/roadmap/create"
-            element={
-              <div className="flex">
-                <Sidebar />
-                <div className="flex-1 p-4">
-                  {/* <Roadmap_form /> */}
-                </div>
-              </div>
-            }
-          />
-        </Routes>
-      </main>
-
-      {!isDashboard && !isAuthPage && <Footer />}
-
-    </div>
-  );
-}
-
+import User from '../public-site/pages/User';
 function App() {
   return (
     <BrowserRouter>
-      <AppContent />
+      <div className="flex flex-col min-h-screen">
+
+        {/* Navbar */}
+        <Nav />
+
+        {/* Main content */}
+        <main className="flex-1 p-4">
+          <Routes>
+            <Route path="/form/*" element={<Form />} />
+            <Route path="/form" element={<Navigate to="/form/login" replace />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/vdoguide" element={<VideoSection />} />
+            <Route path="/contact" element={<Contact />} />
+
+            {/* --- ២. Dashboard Layout: បង្ហាញ Sidebar និង Main(Content) គ្មាន Nav/Footer --- */}
+        <Route path="/dashboard" element={
+          <div className="flex min-\h-screen">
+            <Sidebar /> {/* Sidebar ប្រើ class 'fixed' ក្នុងកូដរបស់អ្នក */}
+            <Outlet />
+          </div>
+        }>
+          <Route path="user" element={<User />} />
+          <Route path="nnnn" element={<div>NNNN</div>} />
+        </Route>
+          <Route path="/*" element={<PrepareHomePage />} />
+            
+
+          </Routes>
+        </main>
+
+        {/* Footer */}
+        <Footer />
+
+      </div>
     </BrowserRouter>
   );
 }

@@ -4,6 +4,7 @@ import { SiGoogleclassroom } from "react-icons/si";
 import { IoIosLogOut } from "react-icons/io";
 import { MdHome } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   // បង្កើត Style សម្រាប់ប៊ូតុងដែលកំពុង Active (ចុចជាប់)
@@ -33,10 +34,22 @@ function Sidebar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dashboard/user" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <Link to="/dashboard/user" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Users</span>
-            </NavLink>
+            </Link>
+          </li>
+          <li>
+            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+              <PiStudentFill className="text-xl group-hover:scale-110" />
+              <span className="font-medium">Road Maps</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+              <PiStudentFill className="text-xl group-hover:scale-110" />
+              <span className="font-medium">Video Guide Line</span>
+            </a>
           </li>
           <li>
             <NavLink to="/roadmaps" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
