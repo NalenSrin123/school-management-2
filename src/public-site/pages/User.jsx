@@ -213,7 +213,12 @@ export default function User() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen w-screen bg-gray-100 flex items-start justify-center p-4 sm:p-6 lg:p-8 font-sans">
+=======
+    /* ADJUSTED: Added 'md:ml-64' to offset for fixed sidebar and 'w-auto' for container flow */
+    <div className="min-h-screen bg-gray-100 p-4 sm:p-6 lg:p-8 font-sans md:ml-64">
+>>>>>>> create_course
       {/* Toast */}
       {toast && (
         <div className={`fixed top-5 right-5 z-50 px-5 py-3 rounded-xl shadow-lg text-white text-sm font-medium transition-all
@@ -225,7 +230,7 @@ export default function User() {
       {/* Modal */}
       {showModal && <AddModal onClose={() => setShowModal(false)} onAdd={addInvoice} />}
 
-      <div className="w-full max-w-6xl bg-white rounded-2xl shadow-sm overflow-hidden">
+      <div className="w-full max-w-6xl mx-auto bg-white rounded-2xl shadow-sm overflow-hidden">
 
         {/* ── Tabs ── */}
         <div className="border-b border-gray-100 px-4 sm:px-6 overflow-x-auto">
@@ -283,7 +288,7 @@ export default function User() {
         </div>
 
         {/* ── Table (Desktop) ── */}
-        <div className="hidden md:block overflow-x-auto">
+        <div className="hidden lg:block overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-blue-50/60 border-y border-gray-100">
@@ -334,7 +339,7 @@ export default function User() {
         </div>
 
         {/* ── Card List (Mobile/Tablet) ── */}
-        <div className="md:hidden divide-y divide-gray-100">
+        <div className="lg:hidden divide-y divide-gray-100">
           {filtered.length === 0 ? (
             <div className="text-center py-16 text-gray-400 text-sm">No invoices found.</div>
           ) : filtered.map(inv => (
