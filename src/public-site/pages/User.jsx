@@ -213,12 +213,8 @@ export default function User() {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen w-screen bg-gray-100 flex items-start justify-center p-4 sm:p-6 lg:p-8 font-sans">
-=======
     /* ADJUSTED: Added 'md:ml-64' to offset for fixed sidebar and 'w-auto' for container flow */
     <div className="min-h-screen bg-gray-100 p-4 sm:p-6 lg:p-8 font-sans md:ml-64">
->>>>>>> create_course
       {/* Toast */}
       {toast && (
         <div className={`fixed top-5 right-5 z-50 px-5 py-3 rounded-xl shadow-lg text-white text-sm font-medium transition-all

@@ -19,6 +19,7 @@ import CourseList from "../dashboard/pages/courses/CourseList";
 import User from "../public-site/pages/User";
 import RoadMap from "../dashboard/components/tables/RoadMap";
 import VideoGuidlineTable from "../dashboard/components/tables/VideoGuidlineTable";
+import OverView from "../dashboard/components/charts/OverView";
 
 function AppContent() {
   const location = useLocation();
@@ -44,14 +45,7 @@ function AppContent() {
 
           {/* Dashboard */}
           <Route path="/dashboard" element={<DashboardLayout />}>
-            <Route
-              index
-              element={
-                <div className="p-6 md:ml-64">
-                  <h1 className="text-2xl font-bold">Dashboard Overview</h1>
-                </div>
-              }
-            />
+            <Route index element={<OverView />} />
             <Route path="courses" element={<CourseList />} />
             <Route path="users" element={<User />} />
             <Route path="roadmaps" element={<RoadMap />} />
@@ -76,7 +70,7 @@ function AppContent() {
 
 function AppWrapper() {
   const location = useLocation();
-  const isFormRoute = location.pathname.startsWith('/form');
+  const isFormRoute = location.pathname.startsWith("/form");
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -97,12 +91,40 @@ function AppWrapper() {
 
           {/* Dashboard routes */}
           <Route path="/dashboard/*" element={<DashboardLayout />}>
-            <Route index element={<div className="p-6"><h1 className="text-2xl font-bold">Dashboard Overview</h1></div>} />
+            <Route
+              index
+              element={
+                <div className="p-6">
+                  <h1 className="text-2xl font-bold">Dashboard Overview</h1>
+                </div>
+              }
+            />
             <Route path="courses" element={<CourseList />} />
             <Route path="users" element={<UserList />} />
-            <Route path="roadmaps" element={<div className="p-6"><h1 className="text-2xl font-bold">Road Maps</h1></div>} />
-            <Route path="vdoguide" element={<div className="p-6"><h1 className="text-2xl font-bold">Video Guide Line</h1></div>} />
-            <Route path="settings" element={<div className="p-6"><h1 className="text-2xl font-bold">Settings</h1></div>} />
+            <Route
+              path="roadmaps"
+              element={
+                <div className="p-6">
+                  <h1 className="text-2xl font-bold">Road Maps</h1>
+                </div>
+              }
+            />
+            <Route
+              path="vdoguide"
+              element={
+                <div className="p-6">
+                  <h1 className="text-2xl font-bold">Video Guide Line</h1>
+                </div>
+              }
+            />
+            <Route
+              path="settings"
+              element={
+                <div className="p-6">
+                  <h1 className="text-2xl font-bold">Settings</h1>
+                </div>
+              }
+            />
           </Route>
         </Routes>
       </main>
@@ -122,4 +144,3 @@ function App() {
 }
 
 export default App;
-
