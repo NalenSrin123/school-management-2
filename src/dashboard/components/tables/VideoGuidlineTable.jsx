@@ -83,7 +83,7 @@ const videoData = [
 
 const VideoGuidlineTable = () => {
   return (
-    <div className="w-[80%] mx-auto mt-6 bg-white rounded-xl shadow border border-blue-500 overflow-hidden">
+    <div className="w-[100%] mx-auto mt-6 bg-white rounded-xl shadow border border-blue-500 overflow-hidden">
       <table className="w-full border-collapse">
         {/* HEADER */}
         <thead className="bg-gray-100 text-gray-600 text-sm">

@@ -29,6 +29,7 @@ function AppWrapper() {
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/vdoguide" element={<VideoSection />} />
+            <Route path="Video" element={<VideoGuidlineLayout />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<PrepareHomePage />} />
 

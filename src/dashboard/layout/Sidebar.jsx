@@ -44,10 +44,24 @@ function Sidebar() {
             <Link to="/dashboard/roadmaps" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Road Maps</span>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/dashboard/vdoguide" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+            <a onClick={()=>{
+              
+            }} href="#" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+              <PiStudentFill className="text-xl group-hover:scale-110" />
+              <span className="font-medium">Video Guide Line</span>
+            </a>
+          </li>
+          <li>
+            <NavLink to="/roadmaps" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
+              <PiStudentFill className="text-xl group-hover:scale-110" />
+              <span className="font-medium">Road Maps</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="Video" className="flex items-center justify-center gap-3 py-3 rounded-lg hover:bg-white/20 transition-all group">
               <PiStudentFill className="text-xl group-hover:scale-110" />
               <span className="font-medium">Video Guide Line</span>
             </Link>
