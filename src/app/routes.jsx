@@ -13,6 +13,8 @@ import ConfirmOTP from "../services/ConfirmOTP";
 import Nav from "../components/layout/nav";
 import Footer from "../public-site/layout/Footer";
 import Form from "../services/Form";
+import User from "../public-site/pages/User";
+import { Sidebar } from "lucide-react";
 
 // Layout component that wraps pages with Nav and Footer
 const Layout = ({ children }) => {
@@ -88,6 +90,7 @@ function AppRoutes() {
       
       {/* Fallback route */}
       <Route path="*" element={<Navigate to="/" replace />} />
+
     </Routes>
   );
 }

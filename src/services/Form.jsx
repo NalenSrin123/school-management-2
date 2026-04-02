@@ -5,7 +5,7 @@ import Design_page_forgot_password from "../services/Design_page_forgot_password
 import ResetPasswordEmail from "../public-site/pages/ResetPasswordEmail";
 import VerificationEmail from "../public-site/pages/VerificationEmail";
 import ConfirmOTP from "./ConfirmOTP";
-import Confirm_reset_password from "../services/confim_reset_password";
+import Confirm_reset_password from "../services/confirm_reset_password";
 import RegisterForm from "../dashboard/components/forms/register_form";
 
 const Form = () => {

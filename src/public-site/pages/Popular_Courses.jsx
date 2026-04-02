@@ -49,10 +49,10 @@ function Popular_Courses() {
           Popular Courses
         </div>
 
-        <div className="text-blue-500 font-bold flex gap-2 items-center cursor-pointer hover:gap-3 transition-all">
+        {/* <div className="text-blue-500 font-bold flex gap-2 items-center cursor-pointer hover:gap-3 transition-all">
           <div>Explore all programs</div>
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" ><path fill="none" stroke="#0575d8" strokeWidth="2" d="M6 12.4h12M12.6 7l5.4 5.4l-5.4 5.4" /></svg>
-        </div>
+        </div> */}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
