@@ -8,14 +8,15 @@ function Header() {
     "Home",
     "About",
     "Courses",
-    "Video Guidline",
+    "Videos",
+    "FAQ",
     "Location",
-    "Contacet Us",
+    "Contact",
   ];
 
   return (
     <header className="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="bg-blue-600 text-white p-1 rounded-lg text-xl">
@@ -25,7 +26,7 @@ function Header() {
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex gap-8 text-sm font-medium text-gray-700">
+        <nav className="hidden md:flex flex-1 mx-6 gap-4 text-sm font-medium text-gray-700 overflow-x-auto whitespace-nowrap">
           {menuItems.map((item, index) => (
             <a
               key={index}
@@ -37,12 +38,12 @@ function Header() {
           ))}
         </nav>
 
-        {/* Right Side (Desktop) */}
+        {/* Right Side */}
         <div className="hidden md:flex items-center gap-4">
           <button className="text-2xl text-gray-700 hover:text-blue-600 transition-colors duration-300">
             <FaUserCircle />
           </button>
-          <button className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors duration-300">
+          <button className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors duration-300">
             Enroll Now
           </button>
         </div>
@@ -50,7 +51,7 @@ function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl text-gray-700 hover:text-blue-600 transition-colors duration-300"
+          className="ml-auto md:hidden text-2xl text-gray-700 hover:text-blue-600 transition-colors duration-300"
         >
           ☰
         </button>
