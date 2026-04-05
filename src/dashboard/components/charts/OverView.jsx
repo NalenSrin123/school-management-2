@@ -1,8 +1,8 @@
 import React from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,PieChart, Pie, Cell } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { ArrowUpRight, ChevronDown } from 'lucide-react';
 
-// --- DATA ---
+// --- DATA (Unchanged) ---
 const cashData = [
   { name: 'JAN', value: 2000 }, { name: 'FEB', value: 2400 },
   { name: 'MAR', value: 1800 }, { name: 'APR', value: 4200 },
@@ -22,7 +22,6 @@ const expenseData = [
   { name: 'Other', value: 2, amount: '$2,128', color: '#eab308' },
 ];
 
-// --- TOOLTIP COMPONENT ---
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
@@ -37,7 +36,8 @@ const CustomTooltip = ({ active, payload }) => {
 
 function OverView() {
   return (
-    <div className="min-h-screen bg-[#f8fafc] p-6 md:p-10 font-sans text-slate-900">
+    /* Added ml-64 to push content away from the fixed sidebar */
+    <div className="min-h-screen bg-[#f8fafc] ml-64 p-6 md:p-10 font-sans text-slate-900">
       <div className="max-w-7xl mx-auto">
         
         <div className="mb-10">
@@ -45,11 +45,12 @@ function OverView() {
           <p className="text-slate-500 font-medium">Wednesday, December 6, 2022</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Adjusted grid to be responsive with the sidebar present */}
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
           
           {/* --- Chart CARD --- */}
-          <div className="lg:col-span-2 bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm">
-            <div className="flex justify-between items-start mb-10">
+          <div className="xl:col-span-2 bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm">
+            <div className="flex flex-col sm:flex-row justify-between items-start mb-10 gap-4">
               <div>
                 <h2 className="text-xl font-bold mb-6">Cashflow</h2>
                 <p className="text-[10px] font-extrabold text-slate-400 tracking-widest mb-1 uppercase">Total Cash</p>
@@ -60,9 +61,9 @@ function OverView() {
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col items-end gap-2">
+              <div className="flex flex-col items-start sm:items-end gap-2">
                 <button className="flex items-center gap-2 text-gray-500 text-sm border border-slate-200 px-4 py-2 rounded-xl hover:bg-slate-50 transition-all font-medium">
-                  Last 12 month <ChevronDown size={16} />
+                  Last 12 months <ChevronDown size={16} />
                 </button>
                 <p className="text-slate-400 text-xs font-medium">January 2022 - December 2022</p>
               </div>
@@ -110,7 +111,7 @@ function OverView() {
           </div>
 
           {/* --- EXPENSES CARD --- */}
-          <div className="lg:col-span-1 bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm flex flex-col">
+          <div className="xl:col-span-1 bg-white p-8 rounded-[32px] border border-slate-100 shadow-sm flex flex-col">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-xl font-bold text-slate-800">Expenses</h2>
               <button className="flex items-center gap-1 text-xs font-bold text-slate-500 border border-slate-200 px-3 py-2 rounded-xl">
@@ -118,8 +119,8 @@ function OverView() {
               </button>
             </div>
 
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-1/2 h-44 relative">
+            <div className="flex flex-col sm:flex-row xl:flex-col items-center gap-6 mb-10">
+              <div className="w-full sm:w-1/2 xl:w-full h-44 relative">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie 
@@ -142,7 +143,7 @@ function OverView() {
                 </div>
               </div>
 
-              <div className="w-1/2 space-y-3">
+              <div className="w-full sm:w-1/2 xl:w-full space-y-3">
                 {expenseData.map((item) => (
                   <div key={item.name} className="flex items-center justify-between group cursor-pointer">
                     <div className="flex items-center gap-2 overflow-hidden">

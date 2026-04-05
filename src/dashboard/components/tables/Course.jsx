@@ -30,7 +30,8 @@ function Course() {
   ];
 
   return (
-    <div className="p-4 sm:p-6 bg-gray-100 min-h-screen">
+    /* ADDED 'md:ml-64' to push content to the right of the sidebar on desktop */
+    <div className="p-4 sm:p-6 bg-gray-100 min-h-screen md:ml-64">
       <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md">
 
         {/* Header */}
@@ -44,7 +45,7 @@ function Course() {
         </div>
 
         {/* Table for medium+ screens */}
-        <div className="hidden md:block overflow-x-auto">
+        <div className="hidden lg:block overflow-x-auto">
           <table className="min-w-full border-collapse">
             <thead>
               <tr className="bg-blue-500 text-white text-left">
@@ -86,8 +87,8 @@ function Course() {
           </table>
         </div>
 
-        {/* Card layout for small screens */}
-        <div className="md:hidden grid gap-4">
+        {/* Card layout for small screens and tablet */}
+        <div className="lg:hidden grid gap-4">
           {courses.map((c) => (
             <div
               key={c.id}

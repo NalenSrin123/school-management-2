@@ -65,11 +65,37 @@ function RoadMap() {
   };
 
   return (
-    <div className="w-[80%] min-h-screen bg-gray-100 p-6">
-      {/* Header */}
-      <div className="bg-white rounded-xl shadow p-6 mb-6">
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-xl font-bold">RoadMaps</h1>
+    /* md:ml-64 handles sidebar, max-w-[95%] makes it much bigger */
+    <div className="md:ml-64 min-h-screen bg-gray-100 p-6">
+      <div className="max-w-[95%] mx-auto">
+        
+        {/* Header Section */}
+        <div className="bg-white rounded-xl shadow border border-gray-200 p-6 mb-6">
+          <div className="flex justify-between items-center mb-6">
+            <h1 className="text-xl font-bold text-gray-800">RoadMaps Overview</h1>
+          </div>
+
+          {/* Info Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Card
+              icon={<CheckCircle size={20} />}
+              title="Status"
+              value="Active"
+              color="bg-green-100 text-green-700"
+            />
+            <Card
+              icon={<Calendar size={20} />}
+              title="Start Date"
+              value="2026-03-22"
+              color="bg-blue-100 text-blue-700"
+            />
+            <Card
+              icon={<Calendar size={20} />}
+              title="End Date"
+              value="Not Set"
+              color="bg-purple-100 text-purple-700"
+            />
+          </div>
         </div>
 
         {/* Info Cards */}
@@ -178,14 +204,13 @@ function RoadMap() {
   );
 }
 
-/* Reusable Card */
 function Card({ icon, title, value, color }) {
   return (
-    <div className={`p-4 rounded-xl ${color} flex items-center gap-3`}>
-      <div>{icon}</div>
+    <div className={`p-4 rounded-xl ${color} flex items-center gap-4 border border-blue-200 shadow-sm`}>
+      <div className="p-2 bg-white/50 rounded-lg">{icon}</div>
       <div>
-        <p className="text-xs uppercase">{title}</p>
-        <p className="font-semibold">{value}</p>
+        <p className="text-[11px] uppercase tracking-wider font-bold opacity-80">{title}</p>
+        <p className="font-bold text-lg">{value}</p>
       </div>
     </div>
   )
