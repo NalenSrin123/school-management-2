@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function VerificationEmail() {
   const code = ["4", "8", "2", "9", "1", "5"];
@@ -38,6 +39,13 @@ function VerificationEmail() {
             <span className="text-blue-500 text-base"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 48 48"><path fill="#2b54e9" d="M24 5c10.493 0 19 8.507 19 19s-8.507 19-19 19S5 34.493 5 24S13.507 5 24 5m-1.25 7c-.69 0-1.25.56-1.25 1.25v12c0 .69.56 1.25 1.25 1.25h8a1.25 1.25 0 1 0 0-2.5H24V13.25c0-.69-.56-1.25-1.25-1.25"/></svg></span>
             <span>This code will expire in <span className="font-bold text-slate-800">10 minutes</span>.</span>
           </div>
+
+          <Link
+            to="/form/confirm-otp"
+            className="inline-block w-full bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors"
+          >
+            Continue to Verify OTP
+          </Link>
 
           <p className="text-[11px] text-gray-400 leading-relaxed px-6">
             If you did not request this code, please ignore this email or contact support if you suspect unauthorized access.

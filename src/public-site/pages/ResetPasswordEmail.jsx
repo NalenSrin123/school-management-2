@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ResetPasswordEmail() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4 py-8 sm:px-6 lg:px-8 font-sans">
@@ -38,15 +40,15 @@ export default function ResetPasswordEmail() {
 
           {/* CTA Button */}
           <div className="flex justify-center mb-5 sm:mb-6">
-            <a
-              href="#"
+            <Link
+              to="/form"
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-semibold px-6 sm:px-8 py-3 rounded-xl transition-colors duration-200 text-sm shadow-md shadow-blue-200 w-full sm:w-auto justify-center"
             >
               Reset Password
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Link>
           </div>
 
           {/* Fallback link box */}

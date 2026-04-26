@@ -1,13 +1,22 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 
 function ConfirmPassword() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // This component is rendered under /form/confirm-reset, so navigate back to the form login route.
+    navigate("/form/login");
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-200 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-white px-4">
       <div className="w-full max-w-md bg-white shadow-2xl rounded-2xl p-8">
-        
         {/* Title */}
         <div className="flex items-center justify-center mb-6">
           <div className="bg-blue-100 p-3 rounded-full">
@@ -22,8 +31,7 @@ function ConfirmPassword() {
           Enter your new password below
         </p>
 
-        <form className="space-y-5">
-
+        <form className="space-y-5" onSubmit={handleSubmit}>
           {/* New Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -39,8 +47,7 @@ function ConfirmPassword() {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-2.5 text-gray-500"
-              >
+                className="absolute right-3 top-3.5 text-gray-500">
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
@@ -63,17 +70,18 @@ function ConfirmPassword() {
 
           {/* Button */}
           <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
-          >
+            type="button"
+            onClick={() => navigate("/form/login")}
+            className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
             Reset Password
           </button>
+
           {/* Back to Login */}
           <p className="text-sm text-center text-gray-600 mt-4">
             Remember your password?{" "}
-            <a href="/login" className="text-blue-600 hover:underline">
+            <Link to="/form/login" className="text-blue-600 hover:underline">
               Back to Login
-            </a>
+            </Link>
           </p>
         </form>
       </div>
