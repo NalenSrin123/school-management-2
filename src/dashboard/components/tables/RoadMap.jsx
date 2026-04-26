@@ -14,7 +14,7 @@ function RoadMap() {
   // LOAD data
   const loadData = async () => {
     setLoading(true);
-    
+    const test='';
     try {
       const res = await fetch(API_URL);
       
