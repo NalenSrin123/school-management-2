@@ -26,16 +26,21 @@ function AppContent() {
 
   // ✅ check if current route is dashboard
   const isDashboard = location.pathname.startsWith("/dashboard");
+  const isAuthRoute =
+    location.pathname.startsWith("/form") ||
+    location.pathname.startsWith("/admin/login");
+  const shouldHidePublicLayout = isDashboard || isAuthRoute;
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navbar (hide in dashboard) */}
-      {!isDashboard && <Nav />}
+      {!shouldHidePublicLayout && <Nav />}
 
       {/* Main content */}
       <main className="flex-1 p-4">
         <Routes>
           <Route path="/form/*" element={<Form />} />
+          <Route path="/admin/login" element={<Navigate to="/form/login" replace />} />
           <Route path="/form" element={<Navigate to="/form/login" replace />} />
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
@@ -63,7 +68,7 @@ function AppContent() {
       </main>
 
       {/* Footer (hide in dashboard) */}
-      {!isDashboard && <Footer />}
+      {!shouldHidePublicLayout && <Footer />}
     </div>
   );
 }
